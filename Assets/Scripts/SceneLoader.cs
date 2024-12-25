@@ -3,32 +3,25 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
-    
+    // Метод для перехода на уровень по номеру
+    public void LoadLevel(int sceneIndex)
+    {
+        // Проверяем, существует ли сцена с данным индексом
+        if (sceneIndex >= 0 && sceneIndex < SceneManager.sceneCountInBuildSettings)
+        {
+            SceneManager.LoadScene(sceneIndex);
+        }
+        else
+        {
+            Debug.LogError("Сцена с индексом " + sceneIndex + " не найдена!");
+        }
+    }
     public void MainMenu()
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(0);
     }
-    public void Level_1()
-    {
-        SceneManager.LoadScene(1);
-    }
-    public void Level_2()
-    {
-        SceneManager.LoadScene(2);
-    }
-    public void Level_3()
-    {
-        SceneManager.LoadScene(3);
-    }
-    public void Level_4()
-    {
-        SceneManager.LoadScene(4);
-    }
-    public void Level_5()
-    {
-        SceneManager.LoadScene(5);
-    }
+    
     public void Repit()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
