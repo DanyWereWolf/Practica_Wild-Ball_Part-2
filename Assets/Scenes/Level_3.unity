@@ -160,7 +160,7 @@ GameObject:
   m_Component:
   - component: {fileID: 94882854}
   m_Layer: 0
-  m_Name: Trap
+  m_Name: -----Trap-----
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -955,11 +955,11 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1455170961}
-  - {fileID: 94882854}
-  - {fileID: 970416488}
-  - {fileID: 990091942}
-  - {fileID: 1574189438}
-  - {fileID: 1061936230}
   - {fileID: 1980096802}
+  - {fileID: 970416488}
+  - {fileID: 1574189438}
+  - {fileID: 94882854}
+  - {fileID: 990091942}
   - {fileID: 7841887590197370969}
+  - {fileID: 1061936230}
+  - {fileID: 1455170961}
