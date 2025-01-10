@@ -1,0 +1,63 @@
+using UnityEngine;
+namespace WildBall.inputs
+{
+    [RequireComponent(typeof(Rigidbody))]
+    public class GameController : MonoBehaviour
+    {
+        [SerializeField, Range(0,10)] private float speed = 2f;
+        private Rigidbody playerRigidbody;
+        private Vector3 movement;
+        public float impactForce = 5f;
+        public bool hasKey = false; // Переменная для отслеживания наличия ключа
+       
+        private void Awake()
+        {
+            playerRigidbody = GetComponent<Rigidbody>();
+        }
+        void Update()
+        {
+            float horizontal = Input.GetAxis(GlobalStringVars.HORIZONTAL_AXIS);
+            float vertical = Input.GetAxis(GlobalStringVars.VERTICAL_AXIS);
+
+            movement = new Vector3(-horizontal,0,-vertical).normalized;
+        }
+        private void FixedUpdate()
+        {
+            MoveCaracter();
+        }
+        private void MoveCaracter()
+        {
+            playerRigidbody.AddForce(movement * speed);
+        }
+
+        private void OnCollisionEnter(Collision collision)
+        {
+            Rigidbody otherRigidbody = collision.gameObject.GetComponent<Rigidbody>();
+            if (collision.gameObject.CompareTag("Barrel"))
+            {
+                // Наносим удар
+                Vector3 direction = (collision.transform.position - transform.position).normalized;
+                otherRigidbody.AddForce(direction * impactForce, ForceMode.Impulse);
+            }
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            
+            if (other.CompareTag("Key")) // Проверяем, что это ключ
+            {
+                hasKey = true; // Игрок подбирает ключ
+                Destroy(other.gameObject); // Удаляем ключ из мира
+            }
+        }
+
+
+#if UNITY_EDITOR
+        [ContextMenu("Reset Values")]
+        public void ResetValues()
+        {
+            speed = 2f;
+        }
+#endif
+    }
+}
