@@ -3,12 +3,12 @@ using WildBall.inputs;
 
 public class BridgeTrigger : MonoBehaviour
 {
-    public GameController gameController;
-    public Animator bridgeAnim;
-    public GameObject TrigZone;
-    public GameObject OpenKey;
-    public GameObject InfoKey;
-    public bool InTrigPl = false;
+    [SerializeField] public GameController gameController;
+    [SerializeField] public Animator bridgeAnim;
+    [SerializeField] public GameObject TrigZone;
+    [SerializeField] public GameObject OpenKey;
+    [SerializeField] public GameObject InfoKey;
+    [SerializeField] public bool InTrigPl = false;
 
     private void Update()
     {

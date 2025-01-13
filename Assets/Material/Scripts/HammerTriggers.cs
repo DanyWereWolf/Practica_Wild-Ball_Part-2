@@ -2,8 +2,7 @@ using UnityEngine;
 
 public class HammerTriggers : MonoBehaviour
 {
-    public float impactForce = 5f;
-
+    [SerializeField] public float impactForce = 5f;
     private void OnCollisionEnter(Collision collision)
     {
         Rigidbody otherRigidbody = collision.gameObject.GetComponent<Rigidbody>();

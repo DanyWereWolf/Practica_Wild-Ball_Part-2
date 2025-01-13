@@ -1,14 +1,17 @@
 using UnityEngine;
+using UnityEngine.Events;
+
 namespace WildBall.inputs
 {
     [RequireComponent(typeof(Rigidbody))]
     public class GameController : MonoBehaviour
     {
+       
         [SerializeField, Range(0,10)] private float speed = 2f;
-        private Rigidbody playerRigidbody;
-        private Vector3 movement;
-        public float impactForce = 5f;
-        public bool hasKey = false; // Переменная для отслеживания наличия ключа
+        [SerializeField] private Rigidbody playerRigidbody;
+        [SerializeField] private Vector3 movement;
+        [SerializeField] public float impactForce = 5f;
+        [SerializeField] public bool hasKey = false; // Переменная для отслеживания наличия ключа
        
         private void Awake()
         {

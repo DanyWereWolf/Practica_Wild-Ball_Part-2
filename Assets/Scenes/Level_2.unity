@@ -176,6 +176,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9f7ce39c99d12f4cb431a3a6b847979, type: 3}
+--- !u!198 &174596072 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 2498192625808899201, guid: b9f7ce39c99d12f4cb431a3a6b847979, type: 3}
+  m_PrefabInstance: {fileID: 174596071}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &246300110 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5858795376459480153, guid: 9cb5055ce1abc484a98bc33fc3065d4d, type: 3}
@@ -1431,6 +1436,10 @@ PrefabInstance:
       propertyPath: losPannel
       value: 
       objectReference: {fileID: 1614000063}
+    - target: {fileID: 4536220765575619292, guid: 2d5dc4957d2d11645be3e44d8894db55, type: 3}
+      propertyPath: particleSystem
+      value: 
+      objectReference: {fileID: 174596072}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

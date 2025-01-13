@@ -960,6 +960,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 560072480786460050, guid: 3b54844ac1a438d429514d82a62df734, type: 3}
   m_PrefabInstance: {fileID: 2002525712}
   m_PrefabAsset: {fileID: 0}
+--- !u!198 &748083236 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 2498192625808899201, guid: b9f7ce39c99d12f4cb431a3a6b847979, type: 3}
+  m_PrefabInstance: {fileID: 228577361}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &771719311 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 560072480786460050, guid: 3b54844ac1a438d429514d82a62df734, type: 3}
@@ -2443,6 +2448,10 @@ PrefabInstance:
       propertyPath: losPannel
       value: 
       objectReference: {fileID: 914049501}
+    - target: {fileID: 3266901627111623092, guid: b651e763f2f67ac469dda33775ebf460, type: 3}
+      propertyPath: particleSystem
+      value: 
+      objectReference: {fileID: 748083236}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2697,6 +2706,10 @@ PrefabInstance:
       propertyPath: losPannel
       value: 
       objectReference: {fileID: 914049501}
+    - target: {fileID: 3266901627111623092, guid: b651e763f2f67ac469dda33775ebf460, type: 3}
+      propertyPath: particleSystem
+      value: 
+      objectReference: {fileID: 748083236}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3508,6 +3521,10 @@ PrefabInstance:
       propertyPath: losPannel
       value: 
       objectReference: {fileID: 914049501}
+    - target: {fileID: 4536220765575619292, guid: 2d5dc4957d2d11645be3e44d8894db55, type: 3}
+      propertyPath: particleSystem
+      value: 
+      objectReference: {fileID: 748083236}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
